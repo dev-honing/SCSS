@@ -19,6 +19,7 @@ for (i=0; i < pokemonKoreanArr.length; i++){
     </body>
   </html>
   `
+  console.log(pokemonHTML);
 }
 // fs.writeFile("pokemon.html", pokemonWithHTML , (err) => {
 //   if (err){
