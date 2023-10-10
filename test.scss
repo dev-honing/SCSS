@@ -8,3 +8,7 @@
 #root {
   @include flex-center(center,center ,column);
 }
+
+// node_modules 폴더와 package-lock.json 영구 삭제해도 된다.
+// npm install을 하면 언제든 다시 다운로드가 가능함!
+// DI (Dependency Injection)에 관한 내용을 학습한 것.
