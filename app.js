@@ -38,3 +38,17 @@ fs.writeFile("pokemon.html", pokemonWithHTML , (err) => {
     console.log(fs.readFileSync("pokemon.html", "utf-8"));
   }
 });
+
+// 오류 코드
+// PS C:\Users\Ho\Desktop\SCSS> node app.js
+//   throw new ERR_INVALID_ARG_TYPE(
+// TypeError [ERR_INVALID_ARG_TYPE]: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received function pokemonHTML
+//     at Object.writeFile (node:fs:2271:5)
+//     at Module._compile (node:internal/modules/cjs/loader:1256:14)
+//     at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+//     at Module.load (node:internal/modules/cjs/loader:1119:32)
+//     at Module._load (node:internal/modules/cjs/loader:960:12)
+//     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:86:12)
+//     at node:internal/main/run_main_module:23:47 {
+//   code: 'ERR_INVALID_ARG_TYPE'
+// }
