@@ -6,7 +6,8 @@ const fs = require('fs');
 // 포켓몬 모듈에서 목록 가져오기
 const pokemonKoreanArr = pokemon.all('ko');
 
-// 문자열로 작성된 HTML 요소와 포켓몬 배열을 합치고 변수 선언
+for (i=0; i < pokemonKoreanArr.length; i++){
+  // 문자열로 작성된 HTML 요소와 포켓몬 배열을 합치고 변수 선언
   const pokemonHTML = `
   <html>
     <head>
@@ -18,7 +19,7 @@ const pokemonKoreanArr = pokemon.all('ko');
     </body>
   </html>
   `
-
+}
 // fs.writeFile("pokemon.html", pokemonWithHTML , (err) => {
 //   if (err){
 //     console.log(err);
