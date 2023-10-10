@@ -7,3 +7,5 @@ const fs = require('fs');
 const pokemonKorean = pokemon.all('ko');
 
 fs.writeFile("pokemon.html", data, );
+// HTML 요소와 한글화된 목록을 pokemonData로 변수 선언
+const pokemonData = `<html><head></head><body><li>`+ pokemonKorean +`</li></body></html>`
