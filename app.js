@@ -31,14 +31,33 @@ pokemonHTML();
 
 const pokemonString = toString(pokemonHTML());
 console.log(typeof(pokemonString));
-// fs.writeFile("pokemon.html", pokemonWithHTML , (err) => {
-//   if (err){
-//     console.log(err);
-//   }
-//   else {
-//     console.log("파일 생성완료\n");
-//     console.log("컨텐츠를 불러왔습니다.");
-//     console.log(fs.readFileSync("pokemon.html", "utf-8"));
-//   }
-// });
 
+
+
+
+fs.writeFile("pokemon.html", pokemonWithHTML , (err) => {
+  if (err){
+    console.log(err);
+  }
+  else {
+    console.log("파일 생성완료\n");
+    console.log("컨텐츠를 불러왔습니다.");
+    console.log(fs.readFileSync("pokemon.html", "utf-8"));
+  }
+});
+
+// 오류 코드
+// PS C:\Users\Ho\Desktop\SCSS> node app.js
+//                     ^
+
+// RangeError: Maximum call stack size exceeded
+//     at pokemonHTML (C:\Users\Ho\Desktop\SCSS\app.js:24:21)
+//     at pokemonHTML (C:\Users\Ho\Desktop\SCSS\app.js:28:1)
+//     at pokemonHTML (C:\Users\Ho\Desktop\SCSS\app.js:28:1)
+//     at pokemonHTML (C:\Users\Ho\Desktop\SCSS\app.js:28:1)
+//     at pokemonHTML (C:\Users\Ho\Desktop\SCSS\app.js:28:1)
+//     at pokemonHTML (C:\Users\Ho\Desktop\SCSS\app.js:28:1)
+//     at pokemonHTML (C:\Users\Ho\Desktop\SCSS\app.js:28:1)
+//     at pokemonHTML (C:\Users\Ho\Desktop\SCSS\app.js:28:1)
+//     at pokemonHTML (C:\Users\Ho\Desktop\SCSS\app.js:28:1)
+//     at pokemonHTML (C:\Users\Ho\Desktop\SCSS\app.js:28:1)
