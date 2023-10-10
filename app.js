@@ -6,12 +6,32 @@ const fs = require('fs');
 // 포켓몬 모듈에서 목록 가져오기
 const pokemonKoreanArr = pokemon.all('ko');
 
-// HTML 요소와 한글화된 목록을 pokemonData로 변수 선언
-const pokemonData = `<html><head></head><body><li>`+ pokemonKoreanArr +`</li></body></html>`
-// ! 목록이 하나하나 <li></li> 사이에 들어가야 하는데 목록 전체가 들어가는 문제 발생
-fs.writeFile("pokemon.html", pokemonData , (err) => {
-  if (err)
+// HTML 요소를 ElementHTML로 변수 선언
+const ElementHTML_front = `
+<html>
+  <head>
+  </head>
+  <body>
+    <li>`
+    
+const ElementHTML_back =    
+    `
+    </li>
+  </body>
+  </html>`;
+  
+// HTML 요소와 포켓몬 하나씩을 합치기
+function pokemonHTML(){
+  for (i=0; i < pokemonKoreanArr.length; i++){
+    pokemonWithHTML = ElementHTML_front + pokemonKoreanArr[i] + ElementHTML_back;
+  }
+pokemonHTML();
+
+}
+fs.writeFile("pokemon.html", pokemonWithHTML , (err) => {
+  if (err){
     console.log(err);
+  }
   else {
     console.log("파일 생성완료\n");
     console.log("컨텐츠를 불러왔습니다.");
