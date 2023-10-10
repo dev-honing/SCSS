@@ -1,1 +1,1 @@
-console.log("hello");
+// `npm i pokemon`을 통해 포켓몬 패키지 다운로드
