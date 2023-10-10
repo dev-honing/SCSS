@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "sass": "echo \"테스트 중입니다.\" && exit 1"
+    "sass": "echo \"테스트 중입니다.\" && exit 1",
+    "ho" : "sass test.scss output-test.css"
   },
   "author": "",
   "license": "ISC",
