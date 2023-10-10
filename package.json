@@ -1,0 +1,14 @@
+{
+  "name": "scss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "sass": "echo \"테스트 중입니다.\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.69.1"
+  }
+}
